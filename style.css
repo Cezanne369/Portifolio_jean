@@ -18,6 +18,10 @@ body {
 
 }
 
+section {
+  padding-top: 80px; /* ajuste conforme a altura do seu menu */
+}
+
 .interface {
     max-width: 1280px;
     margin: 0 auto;
@@ -41,8 +45,14 @@ button:hover {
 
 /*Estilo do cabeçalho*/
 header {
-    padding: 40px 4%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000; /* garante que fique sobre os outros elementos */
+  background-color: black; /* ou a cor do seu menu */
 }
+
 
 header>.interface {
     display: flex;
@@ -55,6 +65,8 @@ header a {
     text-decoration: none;
     display: inline-block;
     transition: .2s;
+
+    
 }
 
 header nav.menu-desktop a:hover {
@@ -264,13 +276,23 @@ section.sobre .flex {
 
 /*ESTILO DO PORTFOLIO*/
 section.portfolio {
-    padding: 80px 4%;
-    box-shadow: 0 0 40px 10px #ffffff1c;
+    padding: 2.5px ;
+    box-shadow: black;
+}
+section.portfolio-2 {
+    padding: 2.5px ;
+    box-shadow: black;
+}
+section.portfolio-2 .flex {
+    justify-content: space-around;
+    margin: 60px 0;
+    gap: 20px;
 }
 
 section.portfolio .flex {
     justify-content: space-around;
     margin: 60px 0;
+    gap: 20px;
 }
 
 .img-port {
